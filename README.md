@@ -4,11 +4,11 @@
 
 ---
 
-NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA.
-NOTE: SAS (r) Proprietary Software 9.4 (TS1M5 MBCS3170)
-NOTE: 이 세션은 X64_10HOME 플랫폼에서 실행되고 있습니다.
+    NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA.
+    NOTE: SAS (r) Proprietary Software 9.4 (TS1M5 MBCS3170)
+    NOTE: 이 세션은 X64_10HOME 플랫폼에서 실행되고 있습니다.
 
-NOTE: 업데이트 된 분석 제품:
+    NOTE: 업데이트 된 분석 제품:
 
       SAS/STAT 14.3
       SAS/ETS 14.3
@@ -16,9 +16,11 @@ NOTE: 업데이트 된 분석 제품:
       SAS/IML 14.3
       SAS/QC 14.3
 
-NOTE: 추가 호스트 정보:
+    NOTE: 추가 호스트 정보:
 
- X64_10HOME WIN 10.0.16299 Workstation
+      X64_10HOME WIN 10.0.16299 Workstation
+
+json으로 불러오는 언어코드에 문제가 있어서 SAS 9.4 (유니코드 지원)으로 실행합니다. 
 
 ---
 
