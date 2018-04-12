@@ -2,21 +2,17 @@
 libname json "&lib";
 %let url01=http://kosis.kr/openapi/statisticsList.do?method=getList;
 %let url02=NjdhZTg3ZTM1OGEzZGMyOGIyZWE0ZmIxZTBiMDg0ZTg=;/*apiKey*/
-%let url03=MT_ZTITLE
 
-%let url=http://kosis.kr/openapi/statisticsList.do?method=getList&apiKey=NjdhZTg3ZTM1OGEzZGMyOGIyZWE0ZmIxZTBiMDg0ZTg=&vwCd=MT_ZTITLE&format=json&jsonVD=Y;
+%macro KOSIS_LIST(url03);
 
-filename out temp;proc http url="&url" method="get" out=out;run;
+filename out temp;proc http url="&url01&apiKey=&url02&vwCd=&url03&format=json&jsonVD=Y" method="get" out=out;run;
 libname raw json fileref=out;
 
-proc datasets lib=raw;run;
-proc print data=raw.alldata(obs=100); run;
-proc print data=raw.root(obs=100); run;
-
-
-
-proc sql;
-create table json.List01 as
-select b.*, &url01&apiKey=&url02&vwCd=&url03&parentListId=&format=json&jsonVD=Y
-from raw.root as b;
+data &url03._list;
+set raw.root;
+LIST_URL=cats("&url01&apiKey=&url02&vwCd=&url03&parentListId=",LIST_ID,"&format=json&jsonVD=Y");
 run;
+
+%mend;
+
+%KOSIS_LIST(url03=MT_ZTITLE);
