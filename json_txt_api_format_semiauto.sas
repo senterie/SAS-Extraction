@@ -107,4 +107,4 @@ Old=C3_NM;/*연령*/
 Num=DT+0;/*수*/
 keep Year Div_num Div Old Num;
 run;
-/*변수명, 변수 형태 변경_end*/
+/*변수명, 변수 형태 변경_end*/
