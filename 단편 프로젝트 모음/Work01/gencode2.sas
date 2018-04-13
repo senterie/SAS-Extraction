@@ -1,0 +1,18 @@
+proc datasets LIB=C nolist;modify tp2;
+label VAR1  ='성별 ';
+label VAR2  ='연령계층별 ';
+label VAR3  ='2017. 02^실업자 (천명) ';
+label VAR4  ='2017. 03^실업자 (천명) ';
+label VAR5  ='2017. 04^실업자 (천명) ';
+label VAR6  ='2017. 05^실업자 (천명) ';
+label VAR7  ='2017. 06^실업자 (천명) ';
+label VAR8  ='2017. 07^실업자 (천명) ';
+label VAR9  ='2017. 08^실업자 (천명) ';
+label VAR10  ='2017. 09^실업자 (천명) ';
+label VAR11  ='2017. 10^실업자 (천명) ';
+label VAR12  ='2017. 11^실업자 (천명) ';
+label VAR13  ='2017. 12^실업자 (천명) ';
+label VAR14  ='2018. 01^실업자 (천명) ';
+label VAR15  ='2018. 02^실업자 (천명) ';
+label VAR16  ='2018. 02^평균구직기간 (월) ';
+quit;
