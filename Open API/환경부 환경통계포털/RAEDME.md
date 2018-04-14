@@ -26,6 +26,6 @@ http://stat.me.go.kr/nesis/mesp/searchApi/searchApiMainAction.do?task=C&key=8NfR
   <br>**WARNING: Data truncation occurred on variable data_LeftHakmok1 Column length=3 Additional length=9.**
   <br>과 같은 명령어가 뜨면서 자료가 잘려서 나옵니다.
 
----
+### Model_03(완성)
 
-libname xmlv2를 이용할 때 data파일에서 length를 한글의 글자수로 읽어와서 결국 proc copy 혹은 data로 data파일을 불러올 때 한글 변수가 절반 밖에 읽어들어오지 않는 문제가 발생하였습니다. 이 문제를 해결하지 못하여, 환경부 환경통계포털 api 제작은 당분간 보류합니다.
+**모델 01과 모델 02에서 발생한 한글 문제를 xmlmap에서 length를 2000으로 수정하는 방법으로 해결하였습니다.**
