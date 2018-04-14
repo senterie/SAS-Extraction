@@ -1,17 +1,15 @@
 %macro env(url);
 
 filename out temp;
+filename map temp;
+filename map_re temp;
 proc http url="&url"
 method="get" out=out;
 run;
-libname raw xmlv2 xmlfileref=out xmlmap="&dir\xml.map" automap=replace;
-
-	proc import datafile="&dir\xml.map" out=map dbms=dlm replace;
-	getnames=no;
-	run;
+libname raw xmlv2 xmlfileref=out xmlmap=map automap=replace;
 
 	data map;
-	 infile "&dir\xml.map" dsd  lrecl=999999999;
+	 infile map dsd  lrecl=999999999;
 	 input raw: $2000.@@;
 	run;
 
@@ -22,11 +20,11 @@ libname raw xmlv2 xmlfileref=out xmlmap="&dir\xml.map" automap=replace;
 
 	data _null_;
 	set map_re;
-	file "&dir\xml.map_re";
+	file map_re;
 	put raw;
 	run;
 
-libname raw xmlv2 xmlfileref=out xmlmap="&dir\xml.map_re";
+libname raw xmlv2 xmlfileref=out xmlmap=map_re;
 
 data &lib .data;
 set raw.data;
