@@ -16,3 +16,7 @@ http://openapi.openfiscaldata.go.kr/
 ### Model_02(완성)
 
 >libname json의 경우 일부 페이지 혹은 테이블에서 오류가 발생하여 txt 기반 Api 이용. SAS 9.4 TS Level 1M4 아래 버젼에서도 원활하게 작동.
+
+### Model_03(완성)
+
+>libname json의 경우 일부 페이지 혹은 테이블에서 오류가 발생하여 txt 기반 Api 이용. SAS 9.4 TS Level 1M4 아래 버젼에서도 원활하게 작동하는 Model_02를 기반으로 한 번에 1,000건 밖에 못 불러오는 열린재정 api를 %do %until 명령문으로 해결한 버젼.
